@@ -40,6 +40,7 @@
         <p class="mb-2">
           Still not convinced? Look at the video below, courtesy of CrossFit HQ:
         </p>
+          <iframe class="mx-auto" width="560" height="315" src="https://www.youtube.com/embed/tzD9BkXGJ1M" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
 </template>

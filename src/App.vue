@@ -36,7 +36,7 @@
   <Banner @bannerEvent="changeBanner" :show="query"/>
   <div class="h-32"></div>
     <div :class="bg">
-        <router-view class="min-h-screen" :show="query" @wlEvent="wlBanner" @cfEvent="cfBanner"></router-view>
+        <router-view :show="query" @wlEvent="wlBanner" @cfEvent="cfBanner"></router-view>
       <Footer class="bg-white border-t-2 border-gray-900" />
     </div>
 

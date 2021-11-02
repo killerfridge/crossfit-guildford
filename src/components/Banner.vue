@@ -21,7 +21,7 @@
         <div class="justify-items-start absolute left-0 bottom-0 pl-3 pb-2">
           <h1 class="font-bold text-4xl 2xl:text-6xl crossfit inline">
             <router-link to="/">
-              CrossFit<span class="text-sm"><sup>&reg;</sup></span>
+              CrossFit New IDeA<span class="text-sm"><sup>&reg;</sup></span>
               <img src="/src/assets/lightning.png" class="inline h-12 2xl:h-16"/>Guildford
             </router-link>
           </h1>
