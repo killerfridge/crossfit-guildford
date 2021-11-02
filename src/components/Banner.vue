@@ -30,22 +30,22 @@
 
 <template>
   <transition name="fade">
-    <div v-if="show" class="bg-gray-50 text-gray-900 border border-red-900 w-screen sm:h-32 h-16 fixed left-0 top-0 z-50">
-      <div class="mx-auto px-2 sm:px-6 lg:px-8 border border-gray-900">
-        <div class="relative flex items-center justify-between sm:h-32 h-16 border border-gray-500">
-          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden border border-blue-900">
+    <div v-if="show" class="bg-gray-50 text-gray-900 w-screen sm:h-32 h-16 fixed left-0 top-0 z-50">
+      <div class="mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between sm:h-32 h-16">
+          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
             <button @click="expand()">
               <MenuIcon v-if="!expanded" class="block h-6 w-6" />
               <XIcon v-else-if="expanded" class="block h-6 w-6"/>
             </button>
           </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start border border-red-900">
-            <div class="flex-shrink-0 flex items-center border border-blue-500 mt-0 sm:mt-5 lg:mt-3">
-              <div class="hidden sm:block h-8 w-auto border border-blue-300 ">
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex-shrink-0 flex items-center mt-0 sm:mt-5 lg:mt-3">
+              <div class="hidden sm:block h-8 w-auto">
                 <CrossFitLogo class="h-16 lg:text-4xl md:text-3xl text-3xl"/>
                 <p class="text-xs text-gray-900">Train Together - Train Harder</p>
               </div>
-              <div class="block sm:hidden h-12 w-auto border border-blue-300">
+              <div class="block sm:hidden h-12 w-auto">
                 <CrossFitLogo class="text-2xl"/>
               </div>
             </div>
@@ -66,7 +66,7 @@
         </div>
       </div>
       <transition name="slide">
-        <Sidebar v-if="expanded" class="bg-gray-500 text-white h-screen w-60 absolute right-0">
+        <Sidebar v-if="expanded" class="bg-gray-500 text-white w-60 absolute right-0">
           <SidebarLink @click="expand()" to="/" text="Home"/>
           <SidebarLink @click="expand()" to="join" text="Join Us"/>
           <SidebarLink @click="expand()" to="contact" text="Contact"/>
@@ -80,21 +80,21 @@
   </transition>
   <transition name="fade">
     <div v-if="!show" class="bg-blue-500 text-white w-screen sm:h-32 h-16 fixed left-0 top-0 z-50">
-        <div class="mx-auto px-2 sm:px-6 lg:px-8 border border-gray-900">
-        <div class="relative flex items-center justify-between sm:h-32 h-16 border border-gray-500">
-          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden border border-blue-900">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between sm:h-32 h-16">
+          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
             <button @click="expand()">
               <MenuIcon v-if="!expanded" class="block h-6 w-6" />
               <XIcon v-else-if="expanded" class="block h-6 w-6"/>
             </button>
           </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start border border-red-900">
-            <div class="flex-shrink-0 flex items-center border border-blue-500 mt-0 sm:mt-5 lg:mt-3">
-              <div class="hidden sm:block h-8 w-auto border border-blue-300 ">
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex-shrink-0 flex items-center mt-0 sm:mt-5 lg:mt-3">
+              <div class="hidden sm:block h-8 w-auto">
                 <GWLogo class="h-16 lg:text-3xl md:text-2xl text-white font-extrabold text-2xl"/>
                 <p class="text-xs text-white">Train Together - Train Harder</p>
               </div>
-              <div class="block sm:hidden h-12 w-auto border border-blue-300">
+              <div class="block sm:hidden h-12 w-auto">
                 <GWLogo class="text-md text-white font-extrabold"/>
               </div>
             </div>
@@ -115,7 +115,7 @@
         </div>
       </div>
       <transition name="slide">
-        <Sidebar v-if="expanded" class="bg-blue-300 text-white h-screen w-60 absolute right-0">
+        <Sidebar v-if="expanded" class="bg-blue-300 text-white w-60 absolute right-0">
           <SidebarLinkBlue @click="expand()" to="/" text="Home"/>
           <SidebarLinkBlue @click="expand()" to="join" text="Join Us"/>
           <SidebarLinkBlue @click="expand()" to="contact" text="Contact"/>
