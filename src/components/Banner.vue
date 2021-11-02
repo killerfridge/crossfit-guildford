@@ -101,8 +101,8 @@
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="block flex space-x-4 justify-end items-end h-2/12 text-right">
-              <navLink to="crossfit" text="CrossFit" class="uppercase border-b border-gray-900 text-right"/>
-              <navLink to="weightlifting" text="Guildford Weightlifting" class="w-32 uppercase border-b border-gray-900 text-right"/>
+              <navLink to="crossfit" text="CrossFit" class="uppercase border-b border-white text-right"/>
+              <navLink to="weightlifting" text="Guildford Weightlifting" class="w-32 uppercase border-b border-white text-right"/>
             </div>
             <div class="flex space-x-4">
               <navLink to="/" text="Home"/>
