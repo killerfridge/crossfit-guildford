@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <img src="src/assets/lightning.png" class="h-full"/>
+  <img src="/src/assets/lightning.png" class="h-full"/>
 </template>
 
 <script>
