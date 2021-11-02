@@ -5,9 +5,9 @@
 
 <template>
   <div class="opacity-0 w-full h-2"></div>
-  <div class="max-w-4xl bg-white mx-auto">
+  <div class="max-w-4xl bg-white mx-auto mb-20">
     <div class="grid grid-cols-2 py-5">
-      <div class="h-96">
+      <div class="h-96 p-3">
           <iframe
               class="w-full h-full"
               src="https://maps.google.com/maps?q=CrossFit%20Guildford&t=&z=17&ie=UTF8&iwloc=&output=embed">
