@@ -43,7 +43,7 @@
             <div class="flex-shrink-0 flex items-center mt-0 sm:mt-5 lg:mt-3">
               <div class="hidden sm:block h-8 w-auto">
                 <CrossFitLogo class="h-16 lg:text-4xl md:text-3xl text-3xl"/>
-                <p class="text-xs text-gray-900">Train Together - Train Harder</p>
+                <p class="text-sm text-gray-900">Train Together - Train Hard</p>
               </div>
               <div class="block sm:hidden h-12 w-auto">
                 <CrossFitLogo class="text-2xl"/>
@@ -92,7 +92,7 @@
             <div class="flex-shrink-0 flex items-center mt-0 sm:mt-5 lg:mt-3">
               <div class="hidden sm:block h-8 w-auto">
                 <GWLogo class="h-16 lg:text-3xl md:text-2xl text-white font-extrabold text-2xl"/>
-                <p class="text-xs text-white">Train Together - Train Harder</p>
+                <p class="text-sm text-white">Train Together - Train Hard</p>
               </div>
               <div class="block sm:hidden h-12 w-auto">
                 <GWLogo class="text-md text-white font-extrabold"/>
