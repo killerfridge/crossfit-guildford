@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="inline">Guildford<Lightning class="inline"/>Weightlifting</div>
+  <div class="inline"><router-link to="weightlifting">Guildford<Lightning class="inline"/>Weightlifting</router-link></div>
 </template>
 
 <script>

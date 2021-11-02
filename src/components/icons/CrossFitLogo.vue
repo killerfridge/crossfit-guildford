@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="crossfit inline">CrossFit<Lightning class="inline"/>Guildford</div>
+  <div class="crossfit inline"><router-link to="/">CrossFit<Lightning class="inline"/>Guildford</router-link></div>
 </template>
 
 <script>
