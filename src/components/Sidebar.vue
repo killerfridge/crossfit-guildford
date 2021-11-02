@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-1 px-2 py-2 sm:hidden">
+  <div class="space-y-1 py-2 w-full sm:hidden">
     <slot />
   </div>
 </template>

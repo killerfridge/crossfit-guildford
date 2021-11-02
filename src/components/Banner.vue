@@ -5,6 +5,11 @@
   import MenuIcon from "./icons/MenuIcon.vue";
   import XIcon from "./icons/XIcon.vue";
   import Sidebar from "./Sidebar.vue";
+  import squareLink from "./squareLink.vue";
+  import SidebarLink from "./navbar/SidebarLink.vue";
+  import CrossFitLogo from "./icons/CrossFitLogo.vue";
+  import SidebarLinkBlue from "./navbar/SidebarLinkBlue.vue";
+  import GWLogo from "./icons/GWLogo.vue";
 
   const emit = defineEmits(['bannerEvent'])
   let expanded = ref(false)
@@ -35,58 +40,91 @@
             </button>
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start border border-red-900">
-            <div class="flex-shrink-0 flex items-center border border-blue-500">
-              <h1 class="hidden lg:block h-8 w-auto border border-blue-300">Appears When Large</h1>
-              <h1 class="block lg:hidden h-8 w-auto border border-blue-300">Appears When Small</h1>
+            <div class="flex-shrink-0 flex items-center border border-blue-500 mt-0 sm:mt-5 lg:mt-3">
+              <div class="hidden sm:block h-8 w-auto border border-blue-300 ">
+                <CrossFitLogo class="h-16 lg:text-4xl md:text-3xl text-3xl"/>
+                <p class="text-xs text-gray-900">Train Together - Train Harder</p>
+              </div>
+              <div class="block sm:hidden h-12 w-auto border border-blue-300">
+                <CrossFitLogo class="text-2xl"/>
+              </div>
             </div>
           </div>
           <div class="hidden sm:block sm:ml-6">
-            <div class="block flex space-x-4 justify-end items-end">
-              <a>Test link 2</a>
-              <a>Test link 2</a>
+            <div class="block flex space-x-4 justify-end items-end h-2/12 text-right">
+              <navLinkDark to="crossfit" text="CrossFit" class="uppercase border-b border-gray-900 text-right"/>
+              <navLinkDark to="weightlifting" text="Guildford Weightlifting" class="w-32 uppercase border-b border-gray-900 text-right"/>
             </div>
             <div class="flex space-x-4">
-              <a href="#">test link 1</a>
-              <a href="#">test link 1</a>
-              <a href="#">test link 1</a>
-              <a href="#">test link 1</a>
+              <navLinkDark to="/" text="Home"/>
+              <navLinkDark to="join" text="Join Us"/>
+              <navLinkDark to="contact" text="Contact"/>
+              <navLinkDark to="schedule" text="Timetable"/>
+              <navLinkDark to="blog" text="Blog"/>
             </div>
           </div>
         </div>
       </div>
-        <Sidebar v-if="expanded" class="bg-gray-500 text-white w-32">
-          <a href="#" class="block w-32">Test 1</a>
-          <a href="#" class="block">Test 1</a>
-          <a href="#" class="block">Test 1</a>
-          <a href="#" class="block">Test 1</a>
+      <transition name="slide">
+        <Sidebar v-if="expanded" class="bg-gray-500 text-white h-screen w-60 absolute right-0">
+          <SidebarLink @click="expand()" to="/" text="Home"/>
+          <SidebarLink @click="expand()" to="join" text="Join Us"/>
+          <SidebarLink @click="expand()" to="contact" text="Contact"/>
+          <SidebarLink @click="expand()" to="schedule" text="Timetable"/>
+          <SidebarLink @click="expand()" to="blog" text="Blog"/>
+          <SidebarLink @click="expand()" to="crossfit" text="CrossFit" class="border-t border-white"/>
+          <SidebarLink @click="expand()" to="weightlifting" text="Weightlifting"/>
         </Sidebar>
+      </transition>
     </div>
   </transition>
   <transition name="fade">
-    <div v-if="!show" class="bg-blue-500 pb-2 text-white m-0 grid grid-cols-2 w-screen h-32 fixed left-0 top-0 z-50">
-        <div class="absolute left-0 bottom-0 justify-items-start pl-3 pb-2">
-          <router-link to="weightlifting">
-            <h1 class="font-extrabold text-2xl 2xl:text-5xl uppercase inline">Guildford</h1>
-            <img src="/src/assets/lightning.png" class="inline h-12 2xl:h-16"/>
-            <h1 class="font-extrabold text-2xl 2xl:text-5xl uppercase inline">Weightlifting
-            </h1>
-          </router-link>
-
-          <p class="pl-1 uppercase text-sm 2xl:text-lg">Train Together - Train Hard</p>
-        </div>
-      <div class="grid-rows-2 grid pb-2">
-          <div class="h-1/2 hidden lg:block right-0 2xl:text-xl 2xl:pr-8 absolute uppercase mr-8 top-2 border-b border-white-500">
-            <navLink to="crossfit" text="CrossFit" />
-            <navLink to="Weightlifting" text="Guildford Weightlifting" />
+    <div v-if="!show" class="bg-blue-500 text-white w-screen sm:h-32 h-16 fixed left-0 top-0 z-50">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8 border border-gray-900">
+        <div class="relative flex items-center justify-between sm:h-32 h-16 border border-gray-500">
+          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden border border-blue-900">
+            <button @click="expand()">
+              <MenuIcon v-if="!expanded" class="block h-6 w-6" />
+              <XIcon v-else-if="expanded" class="block h-6 w-6"/>
+            </button>
           </div>
-        <div class="hidden lg:block 2xl:text-xl absolute right-0 bottom-0 pr-8 uppercase">
-          <navLink to="/" text="Home" />
-          <navLink to="/join" text="Join Us"/>
-          <navLink to="/contact" text="Contact"/>
-          <navLink to="/schedule" text="Timetable"/>
-          <navLink to="/blog" text="Blog"/>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start border border-red-900">
+            <div class="flex-shrink-0 flex items-center border border-blue-500 mt-0 sm:mt-5 lg:mt-3">
+              <div class="hidden sm:block h-8 w-auto border border-blue-300 ">
+                <GWLogo class="h-16 lg:text-3xl md:text-2xl text-white font-extrabold text-2xl"/>
+                <p class="text-xs text-white">Train Together - Train Harder</p>
+              </div>
+              <div class="block sm:hidden h-12 w-auto border border-blue-300">
+                <GWLogo class="text-md text-white font-extrabold"/>
+              </div>
+            </div>
+          </div>
+          <div class="hidden sm:block sm:ml-6">
+            <div class="block flex space-x-4 justify-end items-end h-2/12 text-right">
+              <navLink to="crossfit" text="CrossFit" class="uppercase border-b border-gray-900 text-right"/>
+              <navLink to="weightlifting" text="Guildford Weightlifting" class="w-32 uppercase border-b border-gray-900 text-right"/>
+            </div>
+            <div class="flex space-x-4">
+              <navLink to="/" text="Home"/>
+              <navLink to="join" text="Join Us"/>
+              <navLink to="contact" text="Contact"/>
+              <navLink to="schedule" text="Timetable"/>
+              <navLink to="blog" text="Blog"/>
+            </div>
+          </div>
         </div>
       </div>
+      <transition name="slide">
+        <Sidebar v-if="expanded" class="bg-blue-300 text-white h-screen w-60 absolute right-0">
+          <SidebarLinkBlue @click="expand()" to="/" text="Home"/>
+          <SidebarLinkBlue @click="expand()" to="join" text="Join Us"/>
+          <SidebarLinkBlue @click="expand()" to="contact" text="Contact"/>
+          <SidebarLinkBlue @click="expand()" to="schedule" text="Timetable"/>
+          <SidebarLinkBlue @click="expand()" to="blog" text="Blog"/>
+          <SidebarLinkBlue @click="expand()" to="crossfit" text="CrossFit" class="border-t border-white"/>
+          <SidebarLinkBlue @click="expand()" to="weightlifting" text="Weightlifting"/>
+        </Sidebar>
+      </transition>
     </div>
   </transition>
 </template>
@@ -104,6 +142,16 @@ export default {
 
   .fade-enter-from, .fade-leave-to{
     opacity: 0;
+  }
+
+  .slide-enter-active, .slide-leave-active{
+    transition: .5s ease-out;
+    right: 0;
+  }
+
+  .slide-enter-from, .slide-leave-to{
+    transition: .5s ease-in;
+    right: -100%;
   }
  h1{
    text-align: start;

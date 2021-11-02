@@ -1,6 +1,6 @@
 <template>
     <router-link :to="to">
-      <li class="w-32 h-auto my-auto py-2 text-gray-900 hover:underline">{{ text }}</li>
+      <li class="uppercase h-auto my-auto py-2 text-gray-900 hover:underline">{{ text }}</li>
     </router-link>
 </template>
 
