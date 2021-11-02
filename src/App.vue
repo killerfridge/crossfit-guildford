@@ -34,7 +34,7 @@
 <template>
 
   <Banner @bannerEvent="changeBanner" :show="query"/>
-  <div class="h-32"></div>
+  <div class="sm:h-32 h-16"></div>
     <div :class="bg">
         <router-view :show="query" @wlEvent="wlBanner" @cfEvent="cfBanner"></router-view>
       <Footer class="bg-white border-t-2 border-gray-900" />
