@@ -60,7 +60,7 @@
               <navLinkDark to="join" text="Join Us"/>
               <navLinkDark to="contact" text="Contact"/>
               <navLinkDark to="schedule" text="Timetable"/>
-              <navLinkDark to="blog" text="Blog"/>
+              <!--<navLinkDark to="blog" text="Blog"/>!-->
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
           <SidebarLink @click="expand()" to="join" text="Join Us"/>
           <SidebarLink @click="expand()" to="contact" text="Contact"/>
           <SidebarLink @click="expand()" to="schedule" text="Timetable"/>
-          <SidebarLink @click="expand()" to="blog" text="Blog"/>
+          <!--<SidebarLink @click="expand()" to="blog" text="Blog"/>!-->
           <SidebarLink @click="expand()" to="crossfit" text="CrossFit" class="border-t border-white"/>
           <SidebarLink @click="expand()" to="weightlifting" text="Weightlifting"/>
         </Sidebar>
@@ -109,7 +109,7 @@
               <navLink to="join" text="Join Us"/>
               <navLink to="contact" text="Contact"/>
               <navLink to="schedule" text="Timetable"/>
-              <navLink to="blog" text="Blog"/>
+              <!--<navLink to="blog" text="Blog"/>!-->
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@
           <SidebarLinkBlue @click="expand()" to="join" text="Join Us"/>
           <SidebarLinkBlue @click="expand()" to="contact" text="Contact"/>
           <SidebarLinkBlue @click="expand()" to="schedule" text="Timetable"/>
-          <SidebarLinkBlue @click="expand()" to="blog" text="Blog"/>
+          <!--<SidebarLinkBlue @click="expand()" to="blog" text="Blog"/>!-->
           <SidebarLinkBlue @click="expand()" to="crossfit" text="CrossFit" class="border-t border-white"/>
           <SidebarLinkBlue @click="expand()" to="weightlifting" text="Weightlifting"/>
         </Sidebar>
