@@ -31,7 +31,7 @@
 <template>
   <transition name="fade">
     <div v-if="show" class="bg-gray-50 text-gray-900 w-screen sm:h-32 h-16 fixed left-0 top-0 z-50">
-      <div class="mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="mx-auto px-2 sm:px-6 lg:px-8 max-w-4xl">
         <div class="relative flex items-center justify-between sm:h-32 h-16">
           <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
             <button @click="expand()">
@@ -80,7 +80,7 @@
   </transition>
   <transition name="fade">
     <div v-if="!show" class="bg-blue-500 text-white w-screen sm:h-32 h-16 fixed left-0 top-0 z-50">
-        <div class="mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8 max-w-4xl">
         <div class="relative flex items-center justify-between sm:h-32 h-16">
           <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
             <button @click="expand()">
